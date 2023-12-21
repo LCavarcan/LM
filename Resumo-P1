@@ -1,0 +1,75 @@
+Processadores quânticos
+
+- Usar propriedades das partículas da física quântica para fazer cálculos, superando em muito o desempenho de computadores comuns
+
+Funcionamento básico do PC
+
+- Conexão entre 3 componentes básicos
+
++ Memória
++ Processador
++ Dispositivos de E/S
+
+- Barramentos
+
++ Endereço: Especifica qual o endereço da memória que contém o dado
++ Controle: Especifica que a operação é de leitura
++ Dados: Transfere os dados
+
+- O processador acessa a memória para leitura e escrita utilizando-a para armazenar informações que devem ser processadas pelo programa
+- Quando o processador necessita de um dado da memória, ele especifica pelo barramento de endereços, qual o endereço da memória que possui o dado. Depois, o processador especifica pelo barramento de controle que a operação é de leitura ou escrita. A memória coloca então o valor no barramento de dados, que é lido pelo processador
+
+Funcionamento do processador
+
+- Componentes básicos
+
++ ALU 
++ Registradores de propósito geral
++ Registradores especiais: IP (Registrador de instrução), IR (Apontador de instrução)
+
+- Ciclo de instrução
+
++ Busca de instrução: O processador lê o valor da memória apontada pelo IP. A palavra lida é colocada no IR
++ Busca de operando
++ Execução: Usa a ULA pra fazer a operação necessária
++ Armazenamento
+
+Instruções
+
+- Códigos presentes na memória secundária contendo informações que são processadas pela ULA
+
+- Endereçamento direto
+
++ Modo mais simples de endereçamento, onde o endereço de uma palavra de memória faz parte da codificação da instrução, e pode copiar em um registrador o conteúdo de uma palavra na memória
++ Vantagem: Mais espaço na palavra
++ Mais lento
+
+- Endereçamento imediato
+
++ A instrução carrega em si o operador relativo ao endereçamento e a constante a ser gravada no registrador
++ Vantagem: Velocidade de leitura
++ Desvantagem: Registrador é limitado em tamanho
+
+- Endereçamento indireto
+
++ A instrução carrega o operador relativo ao endereçamento, e um endereço na memória, que por sua vez contém outro endereço para uma constante em outra localização
++ Desvantagem: Lentidão
++ Vantagem: Otimiza o uso da memória
+
+- Por registrador
+
++ O campo de endereço contém o endereço/número de um registrador
++ Vantagem: Muito rápido
++ Desvantagem: Limitado ao tamanho da instrução
+
+Introdução a LM
+
+- Difícil programar o processador em nível de instrução
+- As linguagens de montagem vieram pra tornar essa programação mais confiável
+- Formato de cada linha: [rótulo:][comando][lista de operandos][;comentário]
+
+Diretivas do montador
+
+- Servem para transmitir informações adicionais ao montador
+- Exemplos: Uma constante que será utilizada em várias partes do programa; Reserva de espaço na memória para armazenar variáveis; Indicar o endereço inicial da montagem e final do programa
+- Para constante é usada a diretiva "equ", para reserva de memória "ds", para inicialização "db" (reserva e inicialização em bytes) ou "dw" (reserva e inicialização de palavras)

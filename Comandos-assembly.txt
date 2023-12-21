@@ -1,0 +1,17 @@
+#  |  Mnemônico                                                              |  OpCode |  Exemplo
+1  |  MOV - Passa um valor pra um registrador                                |  06     |  MOV A, 10
+2  |  MOV - Passa de um registrador pra outro                                |  01     |  MOV A, B
+3  |  MOV - Salva um valor em um endereco dado                               |  07     |  MOV [55], 3
+4  |  MOV - Salva um valor de um registrador em um endereco dado             |  04     |  MOV [20], B
+5  |  MOV - Passa o valor de um endereço de memória pro registrador          |  02     |  MOV A, [22]
+6  |  ADD - Soma o valor de dois registradores e salva no primeiro           |  0A     |  ADD A, B
+7  |  SUB - Subtrai o valor de dois registradores e salva no primeiro        |  0E     |  SUB A, B
+8  |  DB - Salva uma String                                                  |  1F     |  DB "hello"
+9  |  MUL - Multiplica o registrador A pelo valor do endereco                |  3E     |  MUL[30]
+10 |  MUL - Multiplica o valor de um registrador pelo valor do registrador A |  3C     |  MUL B
+11 |  MUL - Multiplica um valor pelo valor do registrador A                  |  3F     |  MUL 10
+12 |  INC - Incrementa o valor do registrador em 1                           |  12     |  INC A 
+13 |  DEC - Decrementa o valor do registrador em 1                           |  13     |  DEC A
+14 |  JMP - Pula pra um registrador                                          |  1E     |  JMP B
+15 |  JMP - Pula pra uma posição dada                                        |  1F     |  JMP 15
+16 |  CMP - Compara o valor salvo em dois registradores                      |  14     |  CMP A, B
